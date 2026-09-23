@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Macros de Atendimento</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">CENTRAL DE SUPORTE</p>
+          <h1>Respostas rápidas<br /><em>para seu atendimento.</em></h1>
+          <p class="intro">Selecione uma etapa e copie uma mensagem pronta para responder com agilidade.</p>
+        </div>
+        <div class="time-card" aria-label="Saudação atual">
+          <span class="sun-icon">●</span>
+          <div>
+            <span class="time-label">STATUS DO ATENDIMENTO</span>
+            <strong id="greeting">Bom dia</strong><small>Disponível</small>
+          </div>
+        </div>
+      </header>
+
+      <section class="macro-panel" aria-label="Mensagens de atendimento">
+        <nav class="tabs" role="tablist" aria-label="Etapas do atendimento">
+          <button class="tab active" id="start-tab" role="tab" aria-selected="true" aria-controls="start-panel">Início <span>01</span></button>
+          <button class="tab" id="end-tab" role="tab" aria-selected="false" aria-controls="end-panel">Encerramento <span>02</span></button>
+        </nav>
+
+        <div class="panel-content" id="start-panel" role="tabpanel" aria-labelledby="start-tab">
+          <div class="panel-heading">
+            <div>
+              <p class="section-tag">PRIMEIRO CONTATO</p>
+              <h2>Mensagem de abertura</h2>
+              <p>Identifique o solicitante e inicie o suporte.</p>
+            </div>
+            <button class="random-button" data-type="start">⧉ Copiar frase aleatória</button>
+          </div>
+          <div class="macro-grid" id="start-macros"></div>
+        </div>
+
+        <div class="panel-content hidden" id="end-panel" role="tabpanel" aria-labelledby="end-tab">
+          <div class="panel-heading">
+            <div>
+              <p class="section-tag">FINALIZAÇÃO</p>
+              <h2>Finalização do chamado</h2>
+              <p>Confirme o atendimento e solicite uma avaliação.</p>
+            </div>
+            <button class="random-button" data-type="end">⧉ Copiar frase aleatória</button>
+          </div>
+          <div class="macro-grid" id="end-macros"></div>
+        </div>
+      </section>
+      <p class="footer-note"><span></span> Clique em qualquer mensagem para copiá-la para a área de transferência.</p>
+    </main>
+    <div class="toast" id="toast" role="status">Mensagem copiada!</div>
+    <script src="script.js"></script>
+  </body>
+</html>
