@@ -10,10 +10,22 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="welcome-screen" id="welcome-screen" role="dialog" aria-modal="true" aria-labelledby="welcome-title">
+      <form class="welcome-card" id="welcome-form">
+        <div class="welcome-icon">?</div>
+        <p class="eyebrow">CENTRAL DE SUPORTE</p>
+        <h2 id="welcome-title">Antes de começar,<br />como podemos te chamar?</h2>
+        <p>Seu nome será incluído na mensagem de apresentação.</p>
+        <label for="agent-name">Seu nome</label>
+        <input id="agent-name" name="agent-name" type="text" autocomplete="name" placeholder="Ex.: Ana Souza" required maxlength="60" />
+        <button type="submit">Acessar macros <span>→</span></button>
+      </form>
+    </div>
     <main class="app-shell">
       <header class="hero">
         <div>
           <p class="eyebrow">CENTRAL DE SUPORTE</p>
+          <p class="agent-welcome" id="agent-welcome"></p>
           <h1>Respostas rápidas<br /><em>para seu atendimento.</em></h1>
           <p class="intro">Selecione uma etapa e copie uma mensagem pronta para responder com agilidade.</p>
         </div>

@@ -22,11 +22,14 @@ const endTemplates = [
   "Disponha! Peço a gentileza de avaliar meu atendimento quando esta conversa for encerrada.\n\nMuito obrigado(a)! Se surgir qualquer dúvida, estamos por aqui :) ",
   "Obrigada(o) pela conversa! Gostaria de pedir sua avaliação após o encerramento deste chat.\n\nAgradeço desde já e espero poder ajudar novamente em breve!"
 ];
+startTemplates[5] = "Ol\u00e1, {greeting}! Meu nome \u00e9 {agentName}. Com quem eu falo?\n\nConte comigo para o que precisar.";
+let agentName = "";
 const greeting = () => new Date().getHours() >= 12 ? "Boa tarde" : "Bom dia";
-const format = text => text.replaceAll("{greeting}", greeting());
+const format = text => text.replaceAll("{greeting}", greeting()).replaceAll("{agentName}", agentName);
+const escapeHTML = text => text.replace(/[&<>'"]/g, char => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", "'":"&#039;", '"':"&quot;" })[char]);
 function render(type) {
   const templates = type === "start" ? startTemplates : endTemplates;
-  document.querySelector(`#${type}-macros`).innerHTML = templates.map((text, i) => `<button class="macro" type="button" data-text="${encodeURIComponent(format(text))}"><span class="macro-number">MENSAGEM ${String(i + 1).padStart(2, "0")}</span>${format(text)}</button>`).join("");
+  document.querySelector(`#${type}-macros`).innerHTML = templates.map((text, i) => `<button class="macro" type="button" data-text="${encodeURIComponent(format(text))}"><span class="macro-number">MENSAGEM ${String(i + 1).padStart(2, "0")}</span>${escapeHTML(format(text))}</button>`).join("");
 }
 function copyMessage(text) { navigator.clipboard.writeText(text).then(() => { const toast = document.querySelector("#toast"); toast.classList.add("show"); setTimeout(() => toast.classList.remove("show"), 1800); }); }
 document.querySelectorAll(".tab").forEach(tab => tab.addEventListener("click", () => {
@@ -40,4 +43,12 @@ document.querySelectorAll(".random-button").forEach(button => button.addEventLis
   const selected = cards[Math.floor(Math.random() * cards.length)];
   copyMessage(decodeURIComponent(selected.dataset.text));
 }));
+document.querySelector("#welcome-form").addEventListener("submit", event => {
+  event.preventDefault();
+  agentName = document.querySelector("#agent-name").value.trim();
+  if (!agentName) return;
+  document.querySelector("#welcome-screen").classList.add("hidden");
+  document.querySelector("#agent-welcome").textContent = `${greeting()}, ${agentName}! Que bom ter você por aqui.`;
+  render("start");
+});
 document.querySelector("#greeting").textContent = greeting(); render("start"); render("end");

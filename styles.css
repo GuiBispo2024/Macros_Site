@@ -1,9 +1,13 @@
 :root { --ink:#172235; --muted:#64748b; --paper:#fff; --blue:#1769e0; --blue-soft:#eef5ff; --line:#e2e8f0; }
 * { box-sizing:border-box; }
 body { margin:0; color:var(--ink); background:#f4f7fb; font-family:"DM Sans",sans-serif; }
+.welcome-screen { position:fixed; z-index:10; inset:0; display:grid; place-items:center; padding:20px; background:#10213c; }
+.welcome-screen::before { content:""; position:absolute; width:570px; height:570px; border-radius:50%; background:#1769e0; filter:blur(120px); opacity:.28; }.welcome-screen.hidden { display:none; }
+.welcome-card { position:relative; width:min(100%, 430px); padding:42px; border-radius:12px; background:#fff; box-shadow:0 24px 80px #0004; }.welcome-icon { display:grid; place-items:center; width:38px; height:38px; margin-bottom:24px; border-radius:9px; background:#eaf3ff; color:var(--blue); font-size:21px; font-weight:700; }.welcome-card h2 { font-size:30px; line-height:1.15; }.welcome-card > p:not(.eyebrow) { margin:12px 0 25px; color:var(--muted); font-size:14px; line-height:1.5; }.welcome-card label { display:block; margin-bottom:7px; color:#475569; font-size:13px; font-weight:600; }.welcome-card input { width:100%; padding:13px 14px; border:1px solid #cbd5e1; border-radius:6px; outline:0; color:var(--ink); font:15px "DM Sans",sans-serif; }.welcome-card input:focus { border-color:var(--blue); box-shadow:0 0 0 3px #1769e020; }.welcome-card button { width:100%; margin-top:16px; padding:13px; border:0; border-radius:6px; background:var(--blue); color:#fff; font:600 14px "DM Sans",sans-serif; cursor:pointer; }.welcome-card button:hover { background:#095ac9; }.welcome-card button span { margin-left:6px; font-size:17px; }
 .app-shell { max-width:1200px; padding:48px 32px 32px; margin:auto; }
 .hero { display:flex; justify-content:space-between; align-items:end; gap:30px; margin-bottom:34px; }
 .eyebrow,.section-tag,.time-label { margin:0 0 10px; font-size:11px; font-weight:700; letter-spacing:.11em; color:#64748b; }
+.agent-welcome { margin:0 0 9px; color:var(--blue); font-size:15px; font-weight:600; }
 h1,h2 { margin:0; letter-spacing:-.045em; }
 h1 { font-size:clamp(38px,5vw,58px); line-height:1.05; font-weight:700; }
 h1 em { color:var(--blue); font-family:"DM Sans",sans-serif; font-style:normal; font-weight:700; }
