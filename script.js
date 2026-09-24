@@ -13,7 +13,7 @@ const startTemplates = [
 const endTemplates = [
   "Disponha! Após o encerramento do chat, poderia, por gentileza, avaliar meu atendimento?\n\nDesde já agradeço. Caso surja mais alguma dúvida, entre em contato; ficaremos felizes em ajudar :) ",
   "Foi um prazer ajudar! Ao finalizar este chat, sua avaliação sobre meu atendimento será muito bem-vinda.\n\nAgradeço desde já e permaneço à disposição sempre que precisar :) ",
-  "Por nada! Se puder avaliar este atendimento ao encerrar a conversa, ficarei muito agradecido(a).\n\nQualquer nova dúvida, é só nos chamar. Será um prazer ajudar!",
+  "Por nada! Se puder avaliar este atendimento ao encerrar a conversa, ficarei muito agradecido.\n\nQualquer nova dúvida, é só nos chamar. Será um prazer ajudar!",
   "Fico feliz em ter ajudado! Poderia deixar sua avaliação após o encerramento do chat?\n\nMuito obrigado! Conte conosco sempre que precisar.",
   "Disponha! Sua opinião é muito importante para nós. Ao encerrar, por gentileza, avalie meu atendimento.\n\nAgradeço e sigo à disposição para novas dúvidas :) ",
   "Espero ter esclarecido tudo! Quando o chat for encerrado, poderia avaliar meu atendimento?\n\nDesde já, muito obrigado. Estamos sempre prontos para ajudar!",
