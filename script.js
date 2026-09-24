@@ -14,13 +14,13 @@ const endTemplates = [
   "Disponha! Após o encerramento do chat, poderia, por gentileza, avaliar meu atendimento?\n\nDesde já agradeço. Caso surja mais alguma dúvida, entre em contato; ficaremos felizes em ajudar :) ",
   "Foi um prazer ajudar! Ao finalizar este chat, sua avaliação sobre meu atendimento será muito bem-vinda.\n\nAgradeço desde já e permaneço à disposição sempre que precisar :) ",
   "Por nada! Se puder avaliar este atendimento ao encerrar a conversa, ficarei muito agradecido(a).\n\nQualquer nova dúvida, é só nos chamar. Será um prazer ajudar!",
-  "Fico feliz em ter ajudado! Poderia deixar sua avaliação após o encerramento do chat?\n\nMuito obrigado(a)! Conte conosco sempre que precisar.",
+  "Fico feliz em ter ajudado! Poderia deixar sua avaliação após o encerramento do chat?\n\nMuito obrigado! Conte conosco sempre que precisar.",
   "Disponha! Sua opinião é muito importante para nós. Ao encerrar, por gentileza, avalie meu atendimento.\n\nAgradeço e sigo à disposição para novas dúvidas :) ",
-  "Espero ter esclarecido tudo! Quando o chat for encerrado, poderia avaliar meu atendimento?\n\nDesde já, muito obrigado(a). Estamos sempre prontos para ajudar!",
+  "Espero ter esclarecido tudo! Quando o chat for encerrado, poderia avaliar meu atendimento?\n\nDesde já, muito obrigado. Estamos sempre prontos para ajudar!",
   "Agradeço o contato! Se possível, deixe uma avaliação sobre este atendimento ao finalizar a conversa.\n\nSerá um prazer falar com você novamente caso precise de algo.",
-  "Foi ótimo poder ajudar. Ao encerrar o chat, sua avaliação fará toda a diferença para mim.\n\nObrigado(a) e conte conosco para o que precisar!",
-  "Disponha! Peço a gentileza de avaliar meu atendimento quando esta conversa for encerrada.\n\nMuito obrigado(a)! Se surgir qualquer dúvida, estamos por aqui :) ",
-  "Obrigada(o) pela conversa! Gostaria de pedir sua avaliação após o encerramento deste chat.\n\nAgradeço desde já e espero poder ajudar novamente em breve!"
+  "Foi ótimo poder ajudar. Ao encerrar o chat, sua avaliação fará toda a diferença para mim.\n\nObrigado e conte conosco para o que precisar!",
+  "Disponha! Peço a gentileza de avaliar meu atendimento quando esta conversa for encerrada.\n\nMuito obrigado! Se surgir qualquer dúvida, estamos por aqui :) ",
+  "Obrigado pela conversa! Gostaria de pedir sua avaliação após o encerramento deste chat.\n\nAgradeço desde já e espero poder ajudar novamente em breve!"
 ];
 startTemplates[5] = "Ol\u00e1, {greeting}! Meu nome \u00e9 {agentName}. Com quem eu falo?\n\nConte comigo para o que precisar.";
 let agentName = "";
